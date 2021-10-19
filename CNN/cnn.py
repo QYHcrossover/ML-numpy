@@ -17,7 +17,7 @@ def softmax(x):
 
 # cross_entropy
 def cross_entropy(x,y):
-	return np.sum(-1*y*log(x),axis=1)
+	return np.sum(-1*y*math.log(x),axis=1)
 
 # softmax_with_crossEntropy_backward
 def softmax_with_crossEntropy_backward(y,y_h):

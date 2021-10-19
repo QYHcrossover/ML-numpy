@@ -36,6 +36,7 @@ class LogisticRegression:
 
 if __name__ == "__main__":
 	X,y = make_blobs(200,2,2,random_state=222)
+	print(y)
 	plt.scatter(X[y==0,0],X[y==0,1],y,color="red")
 	plt.scatter(X[y==1,0],X[y==1,1],y,color="blue")
 

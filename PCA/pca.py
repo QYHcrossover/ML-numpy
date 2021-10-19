@@ -8,6 +8,7 @@ def my_pca(x,k):
 	x = x - avg
 	#step2 计算x的协方差矩阵
 	mat = np.cov(x.T)
+	print(mat.shape)
 	#step3 计算协方差矩阵的特征值和特征向量,并选取前k个特征向量
 	a,b = np.linalg.eig(mat)
 	np.linalg.eig(b)
@@ -20,6 +21,7 @@ def my_pca(x,k):
 if __name__ == "__main__":
 
 	data = datasets.load_boston()["data"]
+	print(data.shape)
 	
 	pca = PCA(n_components=2)
 	pca.fit(data)

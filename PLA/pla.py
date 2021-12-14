@@ -20,17 +20,20 @@ class PLA:
 			for xy in X_y[B.squeeze()==False]:
 				self.theta += self.la * xy.reshape(-1,1)
 
-	def predict(self,x):
-		if x @ self.theta > 0:
-			return 1
-		else:
-			return -1
-
+	def predict(self,X):
+		X_ = np.ones([X.shape[0],X.shape[1]+1])   # 扩展 X
+		X_[:,1:] = X
+		predicts = X_@self.theta
+		index1 = predicts<=0
+		index2 = predicts>0
+		predicts[index1] = -1
+		predicts[index2] = 1
+		return predicts
 
 if __name__ == "__main__":
 	X,y = make_blobs(200,2,2,random_state=222)
-	plt.scatter(X[y==0,0],X[y==0,1],y,color="red")
-	plt.scatter(X[y==1,0],X[y==1,1],y,color="blue")
+	plt.scatter(X[y==0][:,0],X[y==0][:,1],color="red")
+	plt.scatter(X[y==1][:,0],X[y==1][:,1],color="blue")
 	y[y==0] = -1
 	
 	pla = PLA()

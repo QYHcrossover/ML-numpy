@@ -7,8 +7,8 @@ from tqdm import tqdm
 class MyAdaboost:
     def __init__(self,n_estimators):
         self.n_estimators = n_estimators
-        self.clfs = []
-        self.alphas = []
+        self.clfs = [lambda x:0 for i in range(self.n_estimators)]
+        self.alphas = [0 for i in range(self.n_estimators)]
         self.weights = None
         
     # 构造弱分类器的决策函数g(X)
@@ -62,13 +62,15 @@ class MyAdaboost:
 #             print(i,err,fi,fv,direct)
             
             #计算G(x)的系数alpha
-            alpha = 0.5 * np.log((1-err)/err)
+            alpha = 0.5 * np.log((1-err)/err) if err !=0 else 1
 #             print("alpha:",alpha)
-            self.alphas.append(alpha)
+            self.alphas[i] = alpha
             
             #求出G
             g = self._G(fi,fv,direct)
-            self.clfs.append(g)
+            self.clfs[i] = g
+            
+            if err == 0: break
             
             #更新weights
             self.weights = self.weights * np.exp(-1 * alpha * y_train * g(X_train))

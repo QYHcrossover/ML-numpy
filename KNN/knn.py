@@ -34,20 +34,20 @@ class KNNclassifier:
         y_predict = [self._predict(i) for i in X_test]
         return np.array(y_predict)
 
-    def accuracy(self, X_test ,y_test):
+    def score(self, X_test ,y_test):
         y_predict = self.predict(X_test)
         return np.sum(y_predict==y_test)/len(X_test)
 
-
-iris = datasets.load_iris()
-X=iris.data
-y=iris.target
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=10,random_state=22)
-my_KNN=KNNclassifier(6)
-my_KNN.fit(X_train,y_train)
-y_predict=my_KNN.predict(X_test)
-print("y_test:","\n",y_test)
-print("y_predict","\n",y_predict)
-print("accuracy:",my_KNN.accuracy(X_test, y_test))
-print("accuracy:",accuracy_score(y_test,y_predict))
+if __name__ ==  "__main__":
+    iris = datasets.load_iris()
+    X=iris.data
+    y=iris.target
+    X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=10,random_state=22)
+    my_KNN=KNNclassifier(6)
+    my_KNN.fit(X_train,y_train)
+    y_predict=my_KNN.predict(X_test)
+    print("y_test:","\n",y_test)
+    print("y_predict","\n",y_predict)
+    print("accuracy:",my_KNN.accuracy(X_test, y_test))
+    print("accuracy:",accuracy_score(y_test,y_predict))
 

@@ -97,9 +97,11 @@ for name,clf in clfs.items():
 
 ### 二维数据模型效果可视化
 
-![image-20211216220606457](https://cdn.jsdelivr.net/gh/QYHcrossover/blog-imgbed//blogimg/1.png)
 
-![image-20211216220606457](https://cdn.jsdelivr.net/gh/QYHcrossover/blog-imgbed//blogimg/2.png)
+
+![image-20211216220606457](https://cdn.jsdelivr.net/gh/QYHcrossover/blog-imgbed//blogimg/1_1.png)
+
+![image-20211216220606457](https://cdn.jsdelivr.net/gh/QYHcrossover/blog-imgbed//blogimg/1_2png.png)
 
 详见:[summary-test.ipynb](summary-test.ipynb)
 

@@ -13,50 +13,21 @@ clf.score(X_test,y_test)
 
 ## 算法列表
 
-### 监督学习-分类算法
 
-- **KNN** K最近邻算法
-  - 排序法实现：[knn.py](./KNN/knn.py)
-  - KDTree实现:  [KDTree.ipynb](./KNN/KDTree.ipynb)
-- **PLA** 感知机模型
-  - 详见: [pla.py](./PLA)
-- **logistic regression** 逻辑回归算法
-  - 梯度下降法实现: [lr.py](./LogisticRegression/lr.py)
-- **decision tree** 决策树算法
-  - ID3实现: [MyDecisionTree.ipynb](DecisionTree/MyDecisionTree.ipynb)
-  - C4.5实现: [C4.5DecisionTree.ipynb](DecisionTree/C4.5DecisionTree.ipynb)
-  - Cart实现: [CART-DT.ipynb](DecisionTree/CART-DT.ipynb)
+|算法 | 代码实现 | 博客 |
+| --- | --- | --- |
+| KNN | 排序法实现：[knn.py](./KNN/knn.py)<br>KDTree实现:  [KDTree.ipynb](./KNN/KDTree.ipynb) | [KNN原理及代码实现——以irs为例](https://zhuanlan.zhihu.com/p/611231868)<br>[KDTree实现KNN算法](https://zhuanlan.zhihu.com/p/611301589) |
+| PLA | 详见[pla.py](./PLA) | [感知机原理及代码实现](https://zhuanlan.zhihu.com/p/611500346) |
+| Logistic Regression | 详见[lr.py](./LogisticRegression/lr.py) | [逻辑回归算法原理以及代码实现](https://zhuanlan.zhihu.com/p/611305829) |
+| Decision Tree | ID3实现: [MyDecisionTree.ipynb](DecisionTree/MyDecisionTree.ipynb)<br>C4.5实现: [C4.5DecisionTree.ipynb](DecisionTree/C4.5DecisionTree.ipynb)<br>Cart实现: [CART-DT.ipynb](DecisionTree/CART-DT.ipynb) | [决策树算法原理以及ID3算法代码实现](https://zhuanlan.zhihu.com/p/611309188)<br>[决策树算法原理以及cart代码实现](https://zhuanlan.zhihu.com/p/611311582) |
+| Naive Bayes | [mybayes.ipynb](./NaiveBayes/mybayes.ipynb) | [朴素贝叶斯原理以及代码实现](https://zhuanlan.zhihu.com/p/611304041) |
+| SVM | 采用cvxopt工具求解: [SVC.ipynb](./SVM/SVC.ipynb)  [svm.py](./SVM/svm.py)<br>SMO算法实现：[SMO.ipynb](./SVM/SMO.ipynb) | [支持向量机原理以及代码实现](https://zhuanlan.zhihu.com/p/611475806)<br>[支持向量机SMO代码实现](https://zhuanlan.zhihu.com/p/611483233) |
+| MLP | 支持自定层数，自定义损失函数等特性：[mlp](./MLP) | [多层感知机及代码实现](https://zhuanlan.zhihu.com/p/611500502) |
+| Adaboost | 元模型为某个特征上”切一刀“，详见 [myAdaboost.ipynb](./Adaboost/myAdaboost.ipynb) | [Adaboost原理以及代码实现](https://zhuanlan.zhihu.com/p/611312201) |
+| CNN | [cnn.py](./CNN) |  |
+| Linear Regression | 详见 [linear regression](./LinearRegression) | [线性回归原理以及代码实现](https://zhuanlan.zhihu.com/p/611485530) |
+| PCA | 详见 [PCA](./PCA) | [PCA算法以及代码实现](https://zhuanlan.zhihu.com/p/611486901) |
 
-- **Naive Bayes** 朴素贝叶斯算法
-
-  - 针对连续变量采用正态分布作为参数估计:  [mybayes.ipynb](./NaiveBayes/mybayes.ipynb)
-
-- **SVM** 支持向量机
-
-  - 采用cvxopt工具求解: [SVC.ipynb](./SVM/SVC.ipynb)  [svm.py](./SVM/svm.py)
-
-  - SMO算法实现：[SMO.ipynb](./SVM/SMO.ipynb)
-
-- **MLP** 多层感知机
-
-  - 支持自定层数，自定义损失函数等特性，详情： [mlp](./MLP)
-  - 实现: [mlp.py](./MLP/mlp.py)
-
-- **adaboost**
-  - 元模型为某个特征上”切一刀“，详见 [myAdaboost.ipynb](./Adaboost/myAdaboost.ipynb)
-
-- **CNN** 卷积神经网络
-  - 详见: [cnn.py](./CNN)
-
-### 监督学习-回归算法
-
-- **linear regression** 线性回归
-  - 详见: [linear regression](./LinearRegression)
-
-### 无监督学习算法
-
-- **PCA** 主成成分分析
-  - 详见: [PCA](./PCA)
 
 ## 一些例子
 
